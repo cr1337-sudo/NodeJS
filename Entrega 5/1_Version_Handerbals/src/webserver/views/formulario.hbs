@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="row align-items-center">
+
+    <div class="col-12 mt-5">
+        <h1 style="text-align: center;">Ingrese un producto</h1>
+        <form action="/productos" method="POST" class="mt-5">
+            <div class="form-group">
+                <label for="nombre">Nombre</label>
+                <input type="text" class="form-control" id="nombre" name="title" placeholder="Titulo" required>
+            </div>
+        <br>
+        <div class="form-group">
+            <label for="apellido">Precio</label>
+            <input type="number" step="0.01" class="form-control" id="precio" name="price" placeholder="Precio" required>
+        </div>
+        <br>
+        <div class="form-group">
+            <label for="edad">Foto URL</label>
+            <input type="text" class="form-control" id="url" name="thumbnail" placeholder="URL hacia imagen del producto" required>
+        </div>
+        <br>
+  
+        <button type="submit" class="btn btn-success mt-5" style="width: 100%;">Ingresar Producto</button>          
+
+      </form>
+
+        <form action="/productos">
+            <input type="submit" class="btn btn-primary mt-5" value="Lista de Productos" style="width: 100%;"/>
+        </form>
+    </div>
+  </div>
+</div>

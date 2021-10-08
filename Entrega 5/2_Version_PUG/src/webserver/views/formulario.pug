@@ -1,0 +1,29 @@
+doctype html
+head
+  // Required meta tags
+  meta(charset='utf-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1')
+  // Bootstrap CSS
+  link(href='https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU' crossorigin='anonymous')
+  title Entrega 5
+.container
+  .row.align-items-center
+    .col-12.mt-5
+      h1(style='text-align: center;') Ingrese un producto
+      form.mt-5(action='/productos' method='POST')
+        .form-group
+          label(for='nombre') Nombre
+          input#nombre.form-control(type='text' name='title' placeholder='Titulo' required='')
+        br
+        .form-group
+          label(for='apellido') Precio
+          input#precio.form-control(type='number' step='0.01' name='price' placeholder='Precio' required='')
+        br
+        .form-group
+          label(for='edad') Foto URL
+          input#url.form-control(type='text' name='thumbnail' placeholder='URL hacia imagen del producto' required='')
+        br
+        button.btn.btn-success.mt-5(type='submit' style='width: 100%;') Ingresar Producto
+      form(action='/productos')
+        input.btn.btn-primary.mt-5(type='submit' value='Lista de Productos' style='width: 100%;')
+script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js' integrity='sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ' crossorigin='anonymous')
