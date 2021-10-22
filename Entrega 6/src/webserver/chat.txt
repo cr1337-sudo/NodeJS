@@ -1,0 +1,17 @@
+[
+  {
+    "user": "german@muller.com",
+    "msg": "Hola!",
+    "time": "10/17/2021, 11:21:39 PM"
+  },
+  {
+    "user": "german@muller.com",
+    "msg": "Como estan?",
+    "time": "10/17/2021, 11:22:19 PM"
+  },
+  {
+    "user": "sddfs",
+    "msg": "sdsf",
+    "time": "10/17/2021, 11:23:36 PM"
+  }
+]
