@@ -1,6 +1,6 @@
 const axios = require('axios')
 const handlebars = require('express-handlebars');
-const fs = require('fs')
+const MsgDB = require('../services/msgdb.js');
 
 class WebServer{
     constructor(app, io){
@@ -22,16 +22,9 @@ class WebServer{
         });
 
         // Cargar Mensajes previos desde archivo
-        let mensajes = []
-
-
-        try {
-            const chat_file = fs.readFileSync("./webserver/chat.txt",'utf-8');
-            mensajes = JSON.parse(chat_file);
-        } catch (error) {
-            console.log("No es posible abrir archivo de chat");
-        }
- 
+        this.msgdb = new MsgDB(__dirname + '/chat.txt',(mensajes)=>{
+            io.sockets.emit('mensajes', mensajes);
+        })
 
         // Configuracion del WebSocket
         io.on('connection', (socket)=>{
@@ -51,13 +44,14 @@ class WebServer{
             })
             
             // WebSocket de Chat
-            socket.emit('mensajes', mensajes);
+            if (this.msgdb.isStarted()){
+                socket.emit('mensajes', this.msgdb.getAllMessages());
+            }
 
             socket.on('new-message', async mensaje=>{
                 mensaje.time = new Date().toLocaleString();
-                mensajes.push(mensaje);
-                await fs.promises.writeFile("./webserver/chat.txt",JSON.stringify(mensajes, null, 2))
-                io.sockets.emit('mensajes', mensajes);
+                this.msgdb.addMsg(mensaje);
+                io.sockets.emit('mensajes', this.msgdb.getAllMessages());
             })
 
         });

@@ -51,5 +51,12 @@ function sendMessage(formulario){
 }
 
 socket.on('mensajes', mensajes=>{
+    const spinner = document.getElementById("spinner");
+    spinner.style.display = 'none';
+    document.getElementById("chat-btn").disabled = false;
     renderMessages(mensajes);
 });
+
+window.onload = function(){
+    document.getElementById("chat-btn").disabled = true;
+}
