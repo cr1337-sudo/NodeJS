@@ -1,0 +1,32 @@
+[
+  {
+    "nombre": "Calculadora",
+    "descripcion": "Calculadora Cientifica para Estudiantes de Ingenieria",
+    "codigo": "2345",
+    "precio": "1500",
+    "stock": "20",
+    "foto": "https://cdn3.iconfinder.com/data/icons/education-209/64/calculator-math-tool-school-512.png",
+    "id": 4,
+    "timestamp": 1635554674540
+  },
+  {
+    "nombre": "Escuadra",
+    "descripcion": "Elemento de dibujo",
+    "codigo": "1242",
+    "precio": "12.23",
+    "stock": "124.99",
+    "foto": "https://cdn3.iconfinder.com/data/icons/education-209/64/ruler-triangle-stationary-school-512.png",
+    "id": 5,
+    "timestamp": 1635559322363
+  },
+  {
+    "nombre": "Calculadora",
+    "descripcion": "Calculadora Cientifica para Estudiantes de Ingenieria",
+    "codigo": "2345",
+    "precio": "1500",
+    "stock": "20",
+    "foto": "https://cdn3.iconfinder.com/data/icons/education-209/64/calculator-math-tool-school-512.png",
+    "id": 6,
+    "timestamp": 1635561338973
+  }
+]
