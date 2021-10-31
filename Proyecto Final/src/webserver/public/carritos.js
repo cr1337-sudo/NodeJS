@@ -89,7 +89,6 @@ function AddProduct(btn){
         return data.json();
     })
     .then((productos)=>{
-        console.log(productos)
         let listExists = false;
         if (productos.length>0){    
             listExists=true;
@@ -108,7 +107,6 @@ function AgregarProductoBtn(btn){
     const producto = {
         id: operacion.product_id
     }
-    console.log(producto)
 
     fetch(`http://localhost:8080/api/carrito/${operacion.carrito_id}/productos`, {
         method: 'POST',
@@ -121,11 +119,14 @@ function AgregarProductoBtn(btn){
         return data.json();
     })
     .then((data)=>{
-        console.log(data)
         alert("Producto Agregado al Carrito!");
-        HideVista('vista-formulario');
+        HideVista('vista-formulario');  
     })
-    .then(socket.emit("refresh-carritos"))
+    .then(()=>{
+        setTimeout(()=>{
+            socket.emit("refresh-carritos")
+        },500)
+    })
 }
 
 function cancelBtn(btn){

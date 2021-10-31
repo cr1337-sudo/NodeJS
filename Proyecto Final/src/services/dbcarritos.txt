@@ -1,8 +1,18 @@
 [
   {
-    "id": 1,
-    "timestamp": 1635705282775,
+    "id": 3,
+    "timestamp": 1635716297262,
     "productos": [
+      {
+        "nombre": "Calculadora",
+        "descripcion": "Calculadora Cientifica para Estudiantes de Ingenieria",
+        "codigo": "1234",
+        "precio": "800",
+        "stock": "50",
+        "foto": "https://cdn3.iconfinder.com/data/icons/education-209/64/calculator-math-tool-school-512.png",
+        "id": 1,
+        "timestamp": 1635717272245
+      },
       {
         "nombre": "Escuadra",
         "descripcion": "Elemento de dibujo",
@@ -11,43 +21,13 @@
         "stock": "235",
         "foto": "https://cdn3.iconfinder.com/data/icons/education-209/64/ruler-triangle-stationary-school-512.png",
         "id": 3,
-        "timestamp": 1635707510862
-      },
-      {
-        "nombre": "Calculadora",
-        "descripcion": "Calculadora Cientifica para Estudiantes de Ingenieria",
-        "codigo": "1234",
-        "precio": "800",
-        "stock": "50",
-        "foto": "https://cdn3.iconfinder.com/data/icons/education-209/64/calculator-math-tool-school-512.png",
-        "id": 15,
-        "timestamp": 1635707662129
-      },
-      {
-        "nombre": "Globo Terreaqueo",
-        "descripcion": "Globo Terraqueo para estudio de geografia en nivel escolar",
-        "codigo": "234",
-        "precio": "78.9",
-        "stock": "800",
-        "foto": "https://cdn3.iconfinder.com/data/icons/education-209/64/globe-earth-geograhy-planet-school-512.png",
-        "id": 4,
-        "timestamp": 1635707650557
-      },
-      {
-        "nombre": "Calculadora",
-        "descripcion": "Calculadora Cientifica para Estudiantes de Ingenieria",
-        "codigo": "1234",
-        "precio": "800",
-        "stock": "50",
-        "foto": "https://cdn3.iconfinder.com/data/icons/education-209/64/calculator-math-tool-school-512.png",
-        "id": 15,
-        "timestamp": 1635707662129
+        "timestamp": 1635717272245
       }
     ]
   },
   {
     "id": 2,
-    "timestamp": 1635707353901,
+    "timestamp": 1635716973200,
     "productos": [
       {
         "nombre": "Globo Terreaqueo",
@@ -56,18 +36,8 @@
         "precio": "78.9",
         "stock": "800",
         "foto": "https://cdn3.iconfinder.com/data/icons/education-209/64/globe-earth-geograhy-planet-school-512.png",
-        "id": 4,
-        "timestamp": 1635707650557
-      },
-      {
-        "nombre": "Calculadora",
-        "descripcion": "Calculadora Cientifica para Estudiantes de Ingenieria",
-        "codigo": "1234",
-        "precio": "800",
-        "stock": "50",
-        "foto": "https://cdn3.iconfinder.com/data/icons/education-209/64/calculator-math-tool-school-512.png",
-        "id": 15,
-        "timestamp": 1635707662129
+        "id": 1,
+        "timestamp": 1635717272245
       },
       {
         "nombre": "Escuadra",
@@ -76,18 +46,18 @@
         "precio": "12.23",
         "stock": "235",
         "foto": "https://cdn3.iconfinder.com/data/icons/education-209/64/ruler-triangle-stationary-school-512.png",
-        "id": 3,
-        "timestamp": 1635707510862
+        "id": 2,
+        "timestamp": 1635717272245
       },
       {
-        "nombre": "Globo Terreaqueo",
-        "descripcion": "Globo Terraqueo para estudio de geografia en nivel escolar",
-        "codigo": "234",
-        "precio": "78.9",
-        "stock": "800",
-        "foto": "https://cdn3.iconfinder.com/data/icons/education-209/64/globe-earth-geograhy-planet-school-512.png",
-        "id": 4,
-        "timestamp": 1635707650557
+        "nombre": "Calculadora",
+        "descripcion": "Calculadora Cientifica para Estudiantes de Ingenieria",
+        "codigo": "1234",
+        "precio": "800",
+        "stock": "50",
+        "foto": "https://cdn3.iconfinder.com/data/icons/education-209/64/calculator-math-tool-school-512.png",
+        "id": 3,
+        "timestamp": 1635717272245
       }
     ]
   }
