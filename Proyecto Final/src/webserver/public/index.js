@@ -61,7 +61,8 @@ function newProduct(formulario){
 function cancelBtn(btn){
     const vista_formulario = document.getElementById("vista-formulario");
     vista_formulario.style.display = 'none';
-    vista_formulario.scrollTop();
+    const nav = document.querySelector('.navbar');
+    nav.scrollIntoView();
 }
 
 

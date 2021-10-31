@@ -1,0 +1,38 @@
+<div class="container">
+  <div class="row align-items-center border border-success rounded mt-5">
+    <div class="col-12 mt-2">
+      <h3 style="text-align: center;">Administración de Carritos</h3>
+      <button type="button" onclick="newCarrito(this)" class="btn btn-success mt-2 mb-2" style="width: 100%;">Nuevo Carrito</button>
+    </div>
+  </div>
+</div>
+
+
+<div class="container">
+  <div class="row align-items-center border border-success rounded mt-5">
+    <div class="col-12">
+      <h3 style="text-align: center;">Carritos cargados actualmente en el servidor</h3>
+      <div id="vista-carritos"></div>
+    </div>
+    <span class="mt-2"></span>
+  </div>
+
+  <div id="vista-formulario" class="mt-5">
+    <div class="row align-items-center border border-success rounded">
+      <div class="col-12">
+        <h2 style="text-align: center;">Agregar Producto al Carrito</h2>
+
+        <h5>Productos Disponibles:</h5>
+        <div id="vista-agregar-productos"></div>
+
+        <button type="button" onclick="cancelBtn(this)" class="btn btn-secondary mt-2" style="width: 100%;" id="btn-formulario">Cancelar</button>
+        </div>
+      </div>
+    </div>
+
+    <span class="mt-2"></span>
+  </div>
+
+  <br>
+
+</div>

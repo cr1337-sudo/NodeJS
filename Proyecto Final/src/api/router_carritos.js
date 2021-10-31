@@ -21,6 +21,11 @@ function ValidateID(lista, res){
 function CreateRouter(db_carritos, db_productos){
     const routerCarrito = Router();
 
+    routerCarrito.get('/',(req, res)=>{
+        const carritos = db_carritos.getFull();
+        res.json(carritos);    
+    });
+
     routerCarrito.post('/', (req, res)=>{
         const carrito = db_carritos.insert(null)
         res.json(carrito.id);

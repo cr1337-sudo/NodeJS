@@ -33,6 +33,18 @@ class WebServer{
                 io.sockets.emit("productos", array_productos.data);           
             })
 
+            // WebSocket de Carritos
+            axios.get('http://localhost:8080/api/carrito')
+            .then(res=>{
+                const carritos = res.data;
+                socket.emit('carritos', carritos);
+            })
+
+            socket.on('refresh-carritos', async ()=>{
+                let carritos = await axios.get('http://localhost:8080/api/carrito')
+                io.sockets.emit("carritos", carritos.data);           
+            })
+
         });
     }
 

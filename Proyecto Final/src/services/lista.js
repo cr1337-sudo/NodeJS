@@ -109,7 +109,7 @@ class Lista{
         if (this.cantidad===0) return null;
         let i = this.init_node.getNext();
         while(i.getNext()){
-            if(i.contenido.id===id){
+            if(i.contenido.id==id){
                 return(i.contenido)
             }
             i = i.getNext();

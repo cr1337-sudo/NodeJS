@@ -71,6 +71,23 @@ class DBCarritos{
         return this.database.getArray();
     };
 
+    getFull(){
+        const db_full = [];
+        const db_carritos_vector = this.getAll();
+        db_carritos_vector.map((carrito)=>{
+            const registro = {
+                id: carrito.id,
+                timestamp: carrito.timestamp,
+                productos: []
+            }
+            carrito.database.getArray().map((producto)=>{
+                registro.productos.push(producto)
+            })
+            db_full.push(registro);
+        })
+        return db_full;
+    }
+
     get(id){
         let carrito = this.database.getById(id);
         if (carrito){

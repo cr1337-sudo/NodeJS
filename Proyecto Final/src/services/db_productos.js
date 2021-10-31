@@ -27,8 +27,10 @@ class DBProductos{
     }
 
     async save_to_disk(){
-        const db_vector = this.getAll();
-        await fs.promises.writeFile(this.config.path_db_productos, JSON.stringify(db_vector, null, 2))
+        if (this.inventario){
+            const db_vector = this.getAll();
+            await fs.promises.writeFile(this.config.path_db_productos, JSON.stringify(db_vector, null, 2))
+        }
     }
 
     isProducto(product){
