@@ -3,12 +3,9 @@
 
   <div class="row align-items-center border border-success rounded">
     <div class="col-12">
-      <h2 style="text-align: center;">Vista de Productos</h2>
+      <h2 style="text-align: center;">Inventario</h2>
       <br>
-      <h4>Incluir productos al inventario</h4>
-      <button type="button" onclick="newProduct(this)" class="btn btn-success">Nuevo Producto</button>
-      <br><br><br><br>
-      <h4>Productos disponibles actualmente:</h4>
+      <h5>Productos disponibles actualmente en el inventario</h5>
       <div id="vista-productos"></div>
     </div>
     <span class="mt-2"></span>
@@ -53,6 +50,9 @@
             </div>
           <button type="submit" class="btn btn-success mt-5" style="width: 100%;" id="btn-formulario">Enviar</button>          
         </form>
+        <button type="button" onclick="cancelBtn(this)" class="btn btn-secondary mt-2" style="width: 100%;" id="btn-formulario">Cancelar</button>
+        <br>
+        <br>
       </div>
     </div>
 

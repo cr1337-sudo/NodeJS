@@ -23,8 +23,7 @@ class WebServer{
             })
 
             socket.on('update-producto', async (dato)=>{
-                console.log(dato.id)
-                await axios.put('http://localhost:8080/api/productos/',dato.id, dato);
+                await axios.put(`http://localhost:8080/api/productos/${dato.id}/`,dato);
                 let array_productos = await axios.get('http://localhost:8080/api/productos')
                 io.sockets.emit("productos", array_productos.data);           
             })

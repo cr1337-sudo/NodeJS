@@ -1,21 +1,28 @@
 const socket = io();
-let mode_new = true;
 
-fetch('./main.hbs')
-.then((data)=>{
-    return data.text();
-})
-.then(plantilla =>{
-    const render = Handlebars.compile(plantilla);
-    document.getElementById("full-body").innerHTML = render();
-    const vista_formulario = document.getElementById("vista-formulario");
-    vista_formulario.style.display = 'none';
-})
-.catch(e=>{
-    console.log(e);
-})
+let operacion = {
+    mode_new: true,
+    id: null,
+    timestamp: null
+}
 
+window.onload = LoadSection('./inventario.hbs');
 
+function LoadSection(plantilla){
+    fetch(plantilla)
+    .then((data)=>{
+        return data.text();
+    })
+    .then(plantilla =>{
+        const render = Handlebars.compile(plantilla);
+        document.getElementById("full-body").innerHTML = render();
+        const vista_formulario = document.getElementById("vista-formulario");
+        vista_formulario.style.display = 'none';
+    })
+    .catch(e=>{
+        console.log(e);
+    })
+}
 
 
 socket.on('productos', productos=>{
@@ -36,6 +43,27 @@ socket.on('productos', productos=>{
     })
 })
 
+function newProduct(formulario){
+    operacion.mode_new = true;
+    operacion.id = null;
+    operacion.timestamp = null;
+    document.getElementById("nombre").value = ""
+    document.getElementById("descripcion").value = ""
+    document.getElementById("codigo").value = ""
+    document.getElementById("precio").value = ""
+    document.getElementById("stock").value = ""
+    document.getElementById("foto").value = ""
+    const vista_formulario = document.getElementById("vista-formulario");
+    vista_formulario.style.display = 'inherit';
+    vista_formulario.scrollIntoView();
+}
+
+function cancelBtn(btn){
+    const vista_formulario = document.getElementById("vista-formulario");
+    vista_formulario.style.display = 'none';
+    vista_formulario.scrollTop();
+}
+
 
 function addProduct(formulario){
     const mensaje = {
@@ -53,11 +81,15 @@ function addProduct(formulario){
     document.getElementById("stock").value = ""
     document.getElementById("foto").value = ""
 
-    if (mode_new){
-        socket.emit("nuevo-producto", mensaje);  
+    if (operacion.mode_new){
+        socket.emit("nuevo-producto", mensaje); 
     }else{
-        socket.emit("update-producto", mensaje);  
+        mensaje.id = operacion.id;
+        mensaje.timestamp = operacion.timestamp;
+        socket.emit("update-producto", mensaje);
     }
+    const vista_formulario = document.getElementById("vista-formulario");
+    vista_formulario.style.display = 'none';
     return false;
 }
 
@@ -92,9 +124,11 @@ function editProducto(btn){
 
         const btn_formulario = document.getElementById("btn-formulario");
         btn_formulario.textContent = "Editar";
-        mode_new = false;   
+        operacion.mode_new = false;
+        operacion.id = product_id;
+        operacion.timestamp = product.timestamp;
+        vista_formulario.scrollIntoView();
+
     })
-
-
 }
 
