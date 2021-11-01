@@ -1,4 +1,5 @@
-# Curso NodeJS - Proyecto Final(Primera Entrega)
+# Curso NodeJS - Proyecto Final
+## Primera Entrega
 
 ## Enunciado General
 
@@ -42,6 +43,17 @@ servidor, donde figuren los mensajes de todos los usuarios identificados por su 
 * Además incorporar dos elementos de entrada: uno para que el usuario ingrese su email (obligatorio para poder utilizar el chat) y otro para ingresar mensajes y enviarlos mediante un botón.
 * *Los mensajes deben persistir en el servidor en un archivo (ver segundo entregable).
 
+## Screnshots
+A continuación se observan las imágenes correspondientes al frontend.
+
+### Interfaz para control del Inventario
+![Inventario1](./inventario1.png)
+
+![Inventario2](./inventario2.png)
+
+### Interfaz para control de Carritos
+![Carritos1](./carritos1.png)
+
 ## Información para pruebas
 ### Formato JSON
 ```
@@ -76,9 +88,13 @@ servidor, donde figuren los mensajes de todos los usuarios identificados por su 
 ### Script Curl
 ```
 curl -d '{"nombre": "Escuadra","descripcion": "Elemento de dibujo","codigo": "1234","precio": "45.34","stock": "100","foto": "https://cdn3.iconfinder.com/data/icons/education-209/64/ruler-triangle-stationary-school-512.png"}' -H "Content-Type: application/json" -X POST http://localhost:8080/api/productos
+```
 
+```
 curl -d '{"nombre": "Calculadora","descripcion": "Calculadora Cientifica para Estudiantes de Ingenieria","codigo": "2345","precio": "1500","stock": "20","foto": "https://cdn3.iconfinder.com/data/icons/education-209/64/calculator-math-tool-school-512.png"}' -H "Content-Type: application/json" -X POST http://localhost:8080/api/productos
+```
 
+```
 curl -d '{"nombre": "Globo Terreaqueo","descripcion": "Globo Terraqueo para estudio de geografia en nivel escolar","codigo": "643","precio": "800",  "stock": "40","foto": "https://cdn3.iconfinder.com/data/icons/education-209/64/globe-earth-geograhy-planet-school-512.png"}' -H "Content-Type: application/json" -X POST http://localhost:8080/api/productos
 ```
 
