@@ -1,0 +1,77 @@
+<div class="container">
+  <br>
+  <div class="row align-items-center border border-success rounded">
+    
+    <div class="col-12">
+        <h2 style="text-align: center;">Ingrese un producto</h2>
+
+        <form onsubmit="return addProduct(this)" class="mt-2">
+            <div class="form-group">
+                <label for="nombre">Nombre</label>
+                <input type="text" class="form-control" id="title" name="title" placeholder="Titulo" required>
+            </div>
+        <br>
+        <div class="form-group">
+            <label for="apellido">Precio</label>
+            <input type="number" step="0.01" class="form-control" id="price" name="price" placeholder="Precio" required>
+        </div>
+        <br>
+        <div class="form-group">
+            <label for="edad">Foto URL</label>
+            <input type="text" class="form-control" id="thumbnail" name="thumbnail" placeholder="URL hacia imagen del producto" required>
+        </div>
+ 
+        <button type="submit" class="btn btn-success mt-5" style="width: 100%;">Ingresar Producto</button>          
+
+      </form>
+    </div>
+    <span class="mt-2"></span>
+  </div>
+
+  <br>
+
+  <div class="row align-items-center border border-success rounded">
+    <div class="col-12">
+      <h2 style="text-align: center;">Vista de Productos</h2>
+      <div id="vista-productos"></div>
+    </div>
+    <span class="mt-2"></span>
+  </div>
+
+  <br>
+
+  <div class="row align-items-center border border-success rounded">
+    <div class="col-12 justify-content-center">
+      <h2 style="text-align: center;">Centro de Mensajes</h2>
+
+      <div class="card mt-2">
+        <div class="card-header">
+          Mensajes Intercambiados
+        </div>
+        <div class="card-body text-center align-middle">
+          <div class="lds-dual-ring" id="spinner"></div>
+          <div style="text-align:left" id="chat"></div>
+        </div>
+      </div>
+
+      <form onsubmit="return sendMessage(this)" class="mt-2">
+          <div class="form-group row">
+            <label for="nombre" class="col-md-1 col-form-label">Usuario:</label>
+            <div class="col-md-11">
+              <input type="text" class="form-control" id="user" placeholder="example@domain.com" required>
+            </div>
+          </div>
+          <div class="form-group row mt-1">
+            <label for="nombre" class="col-md-1 col-form-label">Mensaje:</label>
+            <div class="col-md-11">
+              <input type="text" class="form-control" id="msg" placeholder="Ingresa un mensaje..." required>
+            </div>            
+          </div>
+          <button type="submit" class="btn btn-success mt-5" style="width: 100%;" id="chat-btn">Enviar</button>
+      </form>
+      
+    </div>
+    <span class="mt-2"></span>
+  </div>
+  <br>
+</div>
