@@ -1,0 +1,64 @@
+<div class="container">
+  <br>
+
+  <div class="row align-items-center border border-success rounded">
+    <div class="col-12">
+      <h2 style="text-align: center;">Inventario</h2>
+      <br>
+      <h5>Productos disponibles actualmente en el inventario</h5>
+      <div id="vista-productos"></div>
+    </div>
+    <span class="mt-2"></span>
+  </div>
+
+  <br>
+
+  <div id="vista-formulario">
+    <div class="row align-items-center border border-success rounded">
+          <div class="col-12">
+          <h2 style="text-align: center;">Datos del Producto</h2>
+
+          <form onsubmit="return addProduct(this)" class="mt-2">
+            <div class="form-group">
+                <label for="nombre">Nombre</label>
+                <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre" required>
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="descripcion">Descripcion</label>
+                <input type="text" class="form-control" id="descripcion" name="descripcion" placeholder="Descripcion" required>
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="codigo">Codigo</label>
+                <input type="text" class="form-control" id="codigo" name="codigo" placeholder="Codigo" required>
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="apellido">Precio</label>
+                <input type="number" step="0.01" class="form-control" id="precio" name="precio" placeholder="Precio" required>
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="stock">Stock</label>
+                <input type="number" step="0.01" class="form-control" id="stock" name="stock" placeholder="Stock" required>
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="foto">Foto URL</label>
+                <input type="text" class="form-control" id="foto" name="foto" placeholder="URL hacia imagen del producto" required>
+            </div>
+          <button type="submit" class="btn btn-success mt-5" style="width: 100%;" id="btn-formulario">Enviar</button>          
+        </form>
+        <button type="button" onclick="cancelBtn(this)" class="btn btn-secondary mt-2" style="width: 100%;" id="btn-formulario">Cancelar</button>
+        <br>
+        <br>
+      </div>
+    </div>
+
+    <span class="mt-2"></span>
+  </div>
+
+  <br>
+
+</div>

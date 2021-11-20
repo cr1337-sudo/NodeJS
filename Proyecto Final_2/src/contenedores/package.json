@@ -1,0 +1,13 @@
+{
+  "type": "module",
+  "name": "contenedores",
+  "version": "1.0.0",
+  "description": "",
+  "main": "ContenedorArchivo.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
